@@ -1,0 +1,4 @@
+raw_dataset_path: datasets/raw_data
+output_dataset_path: datasets/lerobot
+num_episodes: 100  # first N raw episodes of each task, in sorted folder order
+fps: 10  # resampling rate; if changed, recheck the gripper command thresholds and wrench low-pass filter in utils.py

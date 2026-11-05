@@ -1,0 +1,23 @@
+observation.state:
+  dtype: float32
+  shape: [13]
+  names: [
+    tcp_R_11, tcp_R_21, tcp_R_31,
+    tcp_R_12, tcp_R_22, tcp_R_32,
+    tcp_R_13, tcp_R_23, tcp_R_33,
+    tcp_p_x, tcp_p_y, tcp_p_z,
+    gripper_state,
+  ]
+action:
+  dtype: float32
+  shape: [26]
+  names: [
+    w_x, w_y, w_z,
+    v_x, v_y, v_z,
+    gripper_cmd,
+    K_R_x, K_R_y, K_R_z,
+    K_p_x, K_p_y, K_p_z,
+    vt_R_x, vt_R_y, vt_R_z,
+    vt_p_x, vt_p_y, vt_p_z,
+    joint_1, joint_2, joint_3, joint_4, joint_5, joint_6, joint_7,
+  ]

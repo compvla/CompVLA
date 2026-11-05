@@ -1,0 +1,39 @@
+dataset:
+  repo_id: Erase
+  root: datasets/lerobot/Erase
+  use_imagenet_stats: true
+
+policy:
+  type: compvla
+  compile_model: false
+  gradient_checkpointing: true
+  dtype: bfloat16
+  push_to_hub: false
+  pretrained_path: checkpoints/pi0
+  device: cuda
+  freeze_vision_encoder: false
+  train_model_list: [true, true, true]
+  n_action_steps: 25
+  chunk_size: 25
+  fps: 10  # must match the dataset fps
+  scheduler_decay_lr: 2.5e-6
+  scheduler_warmup_steps: 1000
+  scheduler_decay_steps: 30000
+  optimizer_lr: 2.5e-5
+  use_joint_in_training: true
+  use_compliance_expert: true
+
+wandb:
+  enable: false
+  project: CompVLA
+  disable_artifact: true
+
+num_workers: 8
+log_freq: 10
+save_freq: 10000
+tolerance_s: 1e-2
+
+batch_size: 32
+steps: 100000
+output_dir: train_results/compvla/Erase
+job_name: compvla_Erase

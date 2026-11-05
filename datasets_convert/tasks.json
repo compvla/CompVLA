@@ -1,0 +1,18 @@
+{
+    "Erase": {
+        "index": 0,
+        "description": "Erase the writing on the whiteboard using the eraser"
+    },
+    "Pivot": {
+        "index": 1,
+        "description": "Push and pivot the black box toward the green box to stand it up"
+    },
+    "PnP": {
+        "index": 2,
+        "description": "Pick the red cube and place it centered on top of the yellow cube"
+    },
+    "Dispense": {
+        "index": 3,
+        "description": "Press the button on the cup dispenser"
+    }
+}
